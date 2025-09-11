@@ -1,0 +1,40 @@
+---
+import type { SeoProps } from "../types";
+
+// In content/seo/base.md
+type Props = SeoProps;
+
+const {
+  title,
+  favicon = "./favicon.ico",
+  description,
+  keywords,
+  author,
+  ogType = "website",
+  image,
+  ogUrl,
+} = Astro.props;
+
+const baseUrl = Astro.site ?? Astro.url;
+const defaultCanonicalUrl = new URL(
+  Astro.url.pathname + Astro.url.search,
+  baseUrl,
+);
+---
+
+<!-- Required Meta Tags -->
+<title>{title}</title>
+<link rel="icon" type="image/png" href={favicon} />
+<meta name="description" content={description} />
+<link rel="canonical" href={defaultCanonicalUrl.href} />
+<meta charset="UTF-8" />
+<!-- Optional Meta Tags for SEO -->
+{keywords && <meta name="keywords" content={keywords} />}
+{author && <meta name="author" content={author} />}
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content={title || ""} />
+<meta property="og:description" content={description || ""} />
+<meta property="og:type" content={ogType || ""} />
+{image && <meta property="og:image" content={image} />}
+{ogUrl && <meta property="og:url" content={ogUrl} />}

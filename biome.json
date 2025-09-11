@@ -1,0 +1,44 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 80,
+    "ignore": [
+      "**/*.min.js",
+      "node_modules",
+      ".vscode",
+      "./pnpm-lock.yaml",
+      "./pnpm-workspace.yaml"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    },
+    "ignore": [
+      "**/*.min.js",
+      "node_modules",
+      ".vscode",
+      "./pnpm-lock.yaml",
+      "./pnpm-workspace.yaml"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "overrides": [
+    {
+      "include": ["*.astro"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "warn",
+            "useImportType": "warn"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { clsx } from "clsx";
+
+interface Props extends HTMLAttributes<"div"> {
+  yPadding?: string;
+  className?: string;
+  as?: "section" | "div" | "header" | "footer";
+}
+
+const {
+  as: Component = "section",
+  yPadding = "py-6 md:py-10 lg:py-12",
+  className,
+  ...props
+} = Astro.props as Props;
+---
+
+<Component class={clsx("w-full custom-section", yPadding, className)} {...props}>
+  <slot />
+</Component>

@@ -1,0 +1,32 @@
+---
+import { cn } from "#/lib/utils";
+import type { HTMLAttributes } from "astro/types";
+
+const maxWidthClasses = {
+  xs: "max-w-xs",
+  sm: "max-w-sm",
+  md: "max-w-md",
+  lg: "max-w-lg",
+  xl: "max-w-7xl",
+  "2xl": "max-w-8xl",
+  full: "max-w-full",
+};
+
+interface Props extends HTMLAttributes<"div"> {
+  className?: string;
+  xPadding?: string;
+  maxWidth?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+}
+
+const {
+  children,
+  maxWidth = "xl",
+  xPadding = "px-4 sm:px-6 lg:px-8",
+  className = "",
+  ...props
+} = Astro.props;
+---
+
+<div class={cn("mx-auto  w-full", xPadding, maxWidthClasses[maxWidth], className)} {...props}>
+  <slot />
+</div>
