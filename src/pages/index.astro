@@ -1,11 +1,61 @@
 ---
-import { AstroContainer, AstroSection } from "#/components/astro";
+import { AstroContainer, AstroSection, P } from "#/components/astro";
+import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import H from "#/components/astro/H.astro";
+import { Button } from "#/components/shadcn/button";
+import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
+import coffe from '#/assets/coffe.png'
+import { Plus } from "lucide-react";
+import { ProductCarousel } from "#/widgets/ProcuctCarousel";
+
+const data = await getEntry('main', 'main')
+console.log(data);
+
 ---
 
 <Layout title="Welcome to Astro." description="">
   <!-- контент страницы -->
+  <AstroSection className="relative">
+    {data?.data.heroImg && <Picture loading={'eager'} src={data?.data.heroImg} alt={''} class={'absolute h-full w-full left-0 right-0 top-0 bottom-0 object-cover xl:object-bottom'}/>}
+    <div class="sm:hidden absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-black/5 via-black/30 to-transparent z-10"></div>
+    <AstroContainer className="relative z-10 flex flex-col justify-center min-h-[600px] xl:min-h-[800px] 2xl:min-h-[1000px]">
+      <div class="sm:w-1/2 sm:mx-0 ">
+
+        <H level="h1" margin="small" className="uppercase drop-shadow-md z-20 font-black">{data?.data.title}</H>
+        <H level="h3" as="span" className=" drop-shadow-md z-20">{data?.data.subtitle}</H>
+        <div class="pt-4 md:pt-8 lg:pt-14">
+
+          <a href={data?.data.heroButton.link} class="z-10 w-full lg:w-[338px]">
+            <Button className="w-[300px] sm:w-[338px]">{data?.data.heroButton.title}</Button>
+          </a>
+        </div>
+      </div>
+    </AstroContainer>
+  </AstroSection>
   <AstroSection>
-    <AstroContainer className="flex gap-2" />
+    <AstroContainer className="relative">
+      <Picture src={coffe} alt={""} class={'absolute top-0 left-0'}/>
+     <ProductCarousel client:load catalogue={data?.data.catalogue}/>
+    </AstroContainer>
+  </AstroSection>
+
+  <AstroSection>
+    <AstroContainer className="relative">
+      {data?.data.about.title && <Picture src={data?.data.about.title} alt={""} class={'opacity-30'}/>}
+      <H className="text-center pt-8 font-[800]">{data?.data.about.subtitle}</H>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="w-full lg:w-1/3">
+          {data?.data.about.advantages.slice(0,2).map((item, i) => <div><h3 class="text-[#FFFFFF2E] font-[800] text-9xl" >{i+1}</h3><P size="lg" margin="default" className="uppercase">{item.title}</P> <P>{item.description}</P></div>)}
+        </div>
+        <div class="w-full lg:w-1/3">
+          <Image src={data?.data.about.img} alt={""}/>
+        </div>
+        <div class="w-full lg:w-1/3">
+           {data?.data.about.advantages.slice(2).map((item, i) => <div><h3 class="text-[#FFFFFF2E] font-[800] text-9xl" >{i+3}</h3><P size="lg"  margin="default"  className="uppercase">{item.title}</P> <P>{item.description}</P></div>)}
+        </div>
+      </div>
+    </AstroContainer>
   </AstroSection>
 </Layout>

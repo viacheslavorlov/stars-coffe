@@ -3,7 +3,8 @@ import { defineCollection, z } from "astro:content";
 const baseInfo = defineCollection({
   // Type-check frontmatter using a schema
   type: "content",
-  schema: z.object({
+  schema: ({image}) => z.object({
+    logo: image().optional(),
     phone: z.string().optional(),
     address: z.string().optional(),
     vk: z.string().optional(),
@@ -30,4 +31,38 @@ const seo = defineCollection({
   }),
 });
 
-export const collections = { baseInfo, seo };
+const main = defineCollection({
+  type: 'content',
+  schema: ({image}) => z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    heroButton: z.object({
+      title: z.string(),
+      link: z.string()
+    }),
+    heroImg: image(),
+
+    catalogue: z.array(z.object({
+      title: z.string(),
+      price: z.number(),
+      description: z.string().optional(),
+      img: image(),
+    })),
+    about: z.object({
+      title: image(),
+      img: image(),
+      subtitle: z.string(),
+      advantages: z.array(z.object({
+        title: z.string(),
+        description: z.string()
+      })),
+      cta: z.object({
+        href: z.string(),
+        label: z.string(),
+      })
+    })
+
+  })
+})
+
+export const collections = { baseInfo, seo, main };
