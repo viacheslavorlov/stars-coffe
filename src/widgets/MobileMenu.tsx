@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList } from "#/components/shadcn/navigation-menu"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "#/components/shadcn/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "#/components/shadcn/sheet"
 import { menuItems } from "#/shared/const/menu"
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu"

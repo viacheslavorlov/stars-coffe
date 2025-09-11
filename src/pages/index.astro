@@ -1,14 +1,12 @@
 ---
+import coffe from '#/assets/coffe.png';
 import { AstroContainer, AstroSection, P } from "#/components/astro";
-import { getEntry } from "astro:content";
-import Layout from "../layouts/Layout.astro";
 import H from "#/components/astro/H.astro";
 import { Button } from "#/components/shadcn/button";
-import { Image } from "astro:assets";
-import { Picture } from "astro:assets";
-import coffe from '#/assets/coffe.png'
-import { Plus } from "lucide-react";
 import { ProductCarousel } from "#/widgets/ProcuctCarousel";
+import { Image, Picture } from "astro:assets";
+import { getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
 
 const data = await getEntry('main', 'main')
 console.log(data);
@@ -50,6 +48,7 @@ console.log(data);
           {data?.data.about.advantages.slice(0,2).map((item, i) => <div><h3 class="text-[#FFFFFF2E] font-[800] text-9xl" >{i+1}</h3><P size="lg" margin="default" className="uppercase">{item.title}</P> <P>{item.description}</P></div>)}
         </div>
         <div class="w-full lg:w-1/3">
+          {/* @ts-ignore */}
           <Image src={data?.data.about.img} alt={""}/>
         </div>
         <div class="w-full lg:w-1/3">
