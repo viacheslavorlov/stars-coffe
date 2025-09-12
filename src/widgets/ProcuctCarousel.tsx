@@ -1,8 +1,8 @@
 import { P } from "#/components/custom-react/typography";
 import { Button } from "#/components/shadcn/button";
-import { Carousel, CarouselContent, CarouselItem } from "#/components/shadcn/carousel"
-import { ArrowRight, Plus } from "lucide-react";
-import Autoplay from "embla-carousel-autoplay"
+import { Carousel, CarouselContent, CarouselItem } from "#/components/shadcn/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { ArrowRight } from "lucide-react";
 
 export type Product = {
     title: string;
@@ -32,7 +32,7 @@ export const ProductCarousel = ({ catalogue }: { catalogue?: Product[] }) => {
                             <P className="text-center">{item.description}</P>
                             <div className="flex justify-between items-center">
                                 <P size={'lg'} className="uppercase font-bold">{item.price}₽</P>
-                                <Button>в приложение <ArrowRight/></Button>
+                                <Button>в приложение <ArrowRight /></Button>
                             </div>
                         </div>
                     </CarouselItem>)

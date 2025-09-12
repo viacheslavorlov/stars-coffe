@@ -1,8 +1,8 @@
+import logo from '#/assets/logo.png'
 import { Button } from "#/components/shadcn/button"
 import { Sheet, SheetContent, SheetTrigger } from "#/components/shadcn/sheet"
 import { menuItems } from "#/shared/const/menu"
 import { AlignJustify } from "lucide-react"
-import logo from '#/assets/logo.png'
 import { useState } from "react"
 
 export const MobileMenu = () => {
@@ -14,7 +14,7 @@ export const MobileMenu = () => {
             </SheetTrigger>
             <SheetContent className="md:hidden pt-20">
 
-                <div className="relative w-full h-full ">
+                <div className="relative w-full h-full space-y-2">
                      <a onClick={() => setOpen(false)} href={"/"} className="mx-auto aspect-square w-[200px] mb-10">
                         <img src={logo.src} alt='' className="w-[200px] object-contain mx-auto" loading="lazy" decoding="async" />
                     </a>

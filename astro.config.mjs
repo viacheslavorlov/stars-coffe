@@ -11,10 +11,10 @@ const { SITE_URL } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  security: {
-    checkOrigin: true,
-  },
+  output: "static",
+  // security: {
+  //   checkOrigin: true,
+  // },
   site: SITE_URL, // TODO
   integrations: [
     tailwind({

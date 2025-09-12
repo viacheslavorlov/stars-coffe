@@ -1,21 +1,31 @@
 ---
+import actionBg from "#/assets/action_bg.png";
 import coffe from "#/assets/coffe.png";
+import hand from "#/assets/hand.png";
 import { AstroContainer, AstroSection, P } from "#/components/astro";
 import H from "#/components/astro/H.astro";
 import { Button } from "#/components/shadcn/button";
+import Footer from "#/widgets/Footer.astro";
+import MapAsync from "#/widgets/MapAsync.astro";
 import { ProductCarousel } from "#/widgets/ProcuctCarousel";
 import { Image, Picture } from "astro:assets";
 import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import Footer from "#/widgets/Footer.astro";
-import actionBg from "#/assets/action_bg.png";
-import hand from "#/assets/hand.png";
-import MapAsync from "#/widgets/MapAsync.astro";
 
 const data = await getEntry("main", "main");
 ---
 
-<Layout title="Welcome to Astro." description="">
+<Layout
+  title="Stars Coffe"
+  description="Кофейня Stars Coffe | Великий новгород"
+  seoData={{
+    description: "Кофейня Stars Coffe | Великий новгород",
+    image: "",
+    ogType: "website",
+    title: "Stars Coffe",
+    favicon: "",
+  }}
+>
   <!-- контент страницы -->
   <AstroSection className="relative">
     {
@@ -50,18 +60,18 @@ const data = await getEntry("main", "main");
       </div>
     </AstroContainer>
   </AstroSection>
-  <AstroSection id={'catalog'} className="scroll-mt-20">
+  <AstroSection id={"catalog"} className="scroll-mt-20">
     <AstroContainer className="relative">
       <Picture src={coffe} alt={""} class={"absolute top-0 left-0"} />
       <ProductCarousel client:load catalogue={data?.data.catalogue} />
     </AstroContainer>
   </AstroSection>
 
-  <AstroSection id={'about'}>
+  <AstroSection id={"about"}>
     <AstroContainer className="relative">
       {
         data?.data.about.title && (
-          <Picture src={data?.data.about.title} alt={""} class={"opacity-30 mt-10"} />
+          <Picture src={data?.data.about.title} alt={""} class={"mt-10 opacity-30"} />
         )
       }
       <H className="pt-8 text-center font-[800]">{data?.data.about.subtitle}</H>
@@ -69,14 +79,16 @@ const data = await getEntry("main", "main");
         <div class="w-full lg:w-1/3">
           {
             data?.data.about.advantages.slice(0, 2).map((item, i) => (
-              <div>
-                <>
+              <div class="flex gap-4">
+                <div>
                   <h3 class="text-9xl font-[800] text-[#FFFFFF2E]">{i + 1}</h3>
+                </div>
+                <div>
                   <P size="lg" margin="default" className="uppercase font-[500]">
                     {item.title}
                   </P>
-                </>{" "}
-                <P>{item.description}</P>
+                  <P>{item.description}</P>
+                </div>
               </div>
             ))
           }
@@ -103,18 +115,19 @@ const data = await getEntry("main", "main");
       </div>
     </AstroContainer>
   </AstroSection>
-  <AstroSection id={'contacts'}>
+  <AstroSection id={"contacts"}>
     <AstroContainer>
       <H margin="small" className="mt-20">Как нас найти?</H>
-      <P margin="default">Адрес: улица Федоровский ручей 2/13 Универмаг "Диез" со стороны набережной</P>
+      <P margin="default"
+        >Адрес: улица Федоровский ручей 2/13 Универмаг "Диез" со стороны набережной</P
+      >
       <MapAsync
-      treshold={600}
-      
-        link="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d53a65278910f3229988a7da4cdeeb403dfad73a7c6d4def0f09311be4c8c17&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+        treshold={600}
+        link="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d53a65278910f3229988a7da4cdeeb403dfad73a7c6d4def0f09311be4c8c17&width=100%&height=400&lang=ru_RU&scroll=true"
       />
     </AstroContainer>
   </AstroSection>
-  <AstroSection className="relative overflow-hidden" id={'actions'}>
+  <AstroSection className="relative overflow-hidden" id={"actions"}>
     <Picture
       src={actionBg}
       alt={""}
