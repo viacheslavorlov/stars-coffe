@@ -22,10 +22,10 @@ const { contacts, className } = Astro.props;
         <a href="/">
             <Image src={logo} width={60} height={60} alt={""} class={"w-[60px] h-[60px]"} />
         </a>
-        <div class="flex gap-4">
+        <div class="flex gap-4 z-30">
             {
                 contacts?.map((contact) => (
-                    <a href={contact.href} class="z-20 relative">
+                    <a href={contact.href} class="z-30 relative">
                         <Image src={contact.img} alt="" class={'size-[60px]'} height={60} width={60} loading="lazy" decoding="async" />
                     </a>
                 ))

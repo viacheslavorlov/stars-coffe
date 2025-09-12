@@ -2,8 +2,8 @@
 title: stars coffee
 subtitle: Ваш личный уголок галактики вкуса. Зажгите свою звезду дня.
 heroButton:
-  title: выбрать кофе
-  link: /#
+  title: Скачать приложение
+  link: https://app.stars-coffee.ru/
 heroImg: ../../assets/hero.png
 
 catalogue:
@@ -38,8 +38,8 @@ about:
     - title: бариста профессионалы
       description: Мастерство бариста в каждой чашке. Оцените с первого глотка.
   cta:
-    href: /#catalog
-    label: выбрать кофе
+    href: https://app.stars-coffee.ru/
+    label: скачать приложение
 
 action:
   title: старс купоны
@@ -50,6 +50,5 @@ action:
 contacts:
   - href: https:/vk.com/
     img: ../../assets/vk.png
-  - href: https:/t.me/
-    img: ../../assets/tg.png
+
 ---

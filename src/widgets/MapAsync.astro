@@ -8,8 +8,8 @@ const { link, treshold = 600 } = Astro.props;
 ---
 
 <!-- Async Ymap -->
-<div class="relative overflow-hidden rounded-xl p-6 md:p-10 lg:rounded-none lg:p-0">
-  <div id="map_container" class="map container-fluid">
+<div class="relative overflow-hidden rounded-xl p-0">
+  <div id="map_container" class="map container-fluid rounded-xl">
     <script is:inline id="ymap_lazy" type="text/javascript" charset="utf-8" async data-src={link}
     ></script>
   </div>
@@ -42,7 +42,7 @@ const { link, treshold = 600 } = Astro.props;
 
   function checkMapVisibility() {
     let rect = map_container.getBoundingClientRect();
-    let distanceToViewport = rect.top - window.innerHeight - treshhold;
+    let distanceToViewport = rect.top - window.innerHeight - treshold;
 
     if (distanceToViewport <= 0) {
       start_lazy_map();
