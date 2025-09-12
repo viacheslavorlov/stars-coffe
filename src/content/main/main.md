@@ -40,4 +40,16 @@ about:
   cta:
     href: /#catalog
     label: выбрать кофе
+
+action:
+  title: старс купоны
+  accent: 1+1 
+  subtitle: (на следующую покупку)
+  description: действует на любой напиток 
+
+contacts:
+  - href: https:/vk.com/
+    img: ../../assets/vk.png
+  - href: https:/t.me/
+    img: ../../assets/tg.png
 ---

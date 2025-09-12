@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 const baseInfo = defineCollection({
   // Type-check frontmatter using a schema
   type: "content",
-  schema: ({image}) => z.object({
+  schema: ({ image }) => z.object({
     logo: image().optional(),
     phone: z.string().optional(),
     address: z.string().optional(),
@@ -33,7 +33,7 @@ const seo = defineCollection({
 
 const main = defineCollection({
   type: 'content',
-  schema: ({image}) => z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     subtitle: z.string(),
     heroButton: z.object({
@@ -60,7 +60,14 @@ const main = defineCollection({
         href: z.string(),
         label: z.string(),
       })
-    })
+    }),
+    action: z.object({
+      title: z.string(),
+      accent: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string()
+    }),
+    contacts: z.array(z.object({ img: image(), href: z.string() }))
 
   })
 })

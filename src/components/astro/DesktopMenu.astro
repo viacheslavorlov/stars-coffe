@@ -62,10 +62,10 @@ const navigationMenuTriggerStyle =
       <ThemeSwitcher client:load />
     </li> -->
   </ul>
-   <a href={"/#catalog"} class="ml-auto">
+   <a href={"/#catalog"} class="ml-auto hidden md:block">
       <Button className="w-28 lg:w-40" size={'sm'}>Заказать</Button>
     </a>
-    <MobileMenu/>
+    <MobileMenu client:load/>
 </nav>
 
 <style>

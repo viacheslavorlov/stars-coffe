@@ -1,0 +1,35 @@
+---
+import { AstroContainer, AstroSection } from "#/components/astro";
+import { Image } from "astro:assets";
+import logo from "#/assets/logo.png";
+import { cn } from "#/lib/utils";
+
+type Props = {
+    contacts?: { img: ImageMetadata; href: string }[];
+    className?: string;
+};
+
+const { contacts, className } = Astro.props;
+---
+
+<AstroSection as="footer"
+    className={cn(
+        "to-transparrent absolute rounded-t-[30px] border border-white/40 bg-gradient-to-t from-white/40 backdrop-blur-[100px]",
+        className,
+    )}
+>
+    <AstroContainer className="flex flex-raw items-center gap-8 justify-between">
+        <a href="/">
+            <Image src={logo} width={60} height={60} alt={""} class={"w-[60px] h-[60px]"} />
+        </a>
+        <div class="flex gap-4">
+            {
+                contacts?.map((contact) => (
+                    <a href={contact.href} class="z-20 relative">
+                        <Image src={contact.img} alt="" class={'size-[60px]'} height={60} width={60} loading="lazy" decoding="async" />
+                    </a>
+                ))
+            }
+        </div>
+    </AstroContainer>
+</AstroSection>
