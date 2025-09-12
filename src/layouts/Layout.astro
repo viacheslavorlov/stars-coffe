@@ -30,12 +30,15 @@ const seo = seoData || (data?.data as SeoProps);
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <Seo {...seoData} />
-   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   </head>
   <body>
-    <header transition:persist class="fixed left-0 right-0 top-0 z-20 backdrop-blur-[100px] bg-gradient-to-b from-white/40 to-transparrent border border-white/40 rounded-b-[30px]">
+    <header
+      transition:persist
+      class="to-transparrent fixed left-0 right-0 top-0 z-20 rounded-b-[30px] border border-white/40 bg-gradient-to-b from-white/40 backdrop-blur-[100px]"
+    >
       <AstroSection yPadding="py-4 sm:py-6 lg:py-8">
         <AstroContainer>
           <!-- <DesktopMenu config={menuItems} client:load /> -->
@@ -47,6 +50,46 @@ const seo = seoData || (data?.data as SeoProps);
       <slot />
     </main>
     {/* Подключаем метрику тут */}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        ((k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a));
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=104132686", "ym");
+
+      ym(104132686, "init", {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: "dataLayer",
+        accurateTrackBounce: true,
+        trackLinks: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/104132686"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        />
+      </div></noscript
+    >
+    <!-- /Yandex.Metrika counter -->
     {/* Не забываем подключить метрику через Partytown!!! attribute type="text/partytown" */}
   </body>
 </html>
