@@ -28,7 +28,7 @@ export default defineConfig({
       config: { debug: false },
     }),
   ],
-  adapter: node({
-    mode: "standalone", //todo
-  }),
+  // adapter: node({
+  //   mode: "standalone", //todo
+  // }),
 });
