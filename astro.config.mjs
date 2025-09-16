@@ -11,7 +11,7 @@ const { SITE_URL } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static",
+  output: "server",
   // security: {
   //   checkOrigin: true,
   // },
@@ -28,7 +28,7 @@ export default defineConfig({
       config: { debug: false },
     }),
   ],
-  // adapter: node({
-  //   mode: "standalone", //todo
-  // }),
+  adapter: node({
+    mode: "standalone", //todo
+  }),
 });
