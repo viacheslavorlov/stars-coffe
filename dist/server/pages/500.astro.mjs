@@ -1,9 +1,9 @@
 import { c as createAstro, a as createComponent, r as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DS_OopFz.mjs';
-import { $ as $$Layout, a as $$Section, b as $$Container } from '../chunks/Layout_FW8wrf40.mjs';
-import { $ as $$H } from '../chunks/H_D3Bi3PSi.mjs';
+import { $ as $$Layout, a as $$Section, b as $$Container } from '../chunks/Layout_ODW3cpuq.mjs';
+import { $ as $$H } from '../chunks/H_DNZw9ln2.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro = createAstro("https://husilijorad.beget.app");
+const $$Astro = createAstro("https://stars-coffee53.ru");
 const $$500 = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$500;

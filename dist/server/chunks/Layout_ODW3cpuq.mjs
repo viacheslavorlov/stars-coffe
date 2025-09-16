@@ -1,7 +1,7 @@
 import { c as createAstro, a as createComponent, m as maybeRenderHead, e as addAttribute, s as spreadAttributes, d as renderSlot, b as renderTemplate, r as renderComponent, A as AstroError, U as UnknownContentCollectionError, R as RenderUndefinedEntryError, u as unescapeHTML, f as escape, g as renderUniqueStylesheet, h as renderScriptElement, i as createHeadAndContent, j as renderScript, k as renderTransition, l as createTransitionScope, n as renderHead } from './astro/server_DS_OopFz.mjs';
 import { z } from 'zod';
 import { r as removeBase, i as isRemotePath, p as prependForwardSlash } from './path_mk0j0CbE.mjs';
-import { V as VALID_INPUT_FORMATS, $ as $$Image } from './_astro_assets_CczljEwY.mjs';
+import { V as VALID_INPUT_FORMATS, $ as $$Image } from './_astro_assets_nkgQe9XQ.mjs';
 import { u as unflatten } from './parse_BMnn4H2B.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { Slot } from '@radix-ui/react-slot';
@@ -18,7 +18,7 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-const $$Astro$f = createAstro("https://husilijorad.beget.app");
+const $$Astro$f = createAstro("https://stars-coffee53.ru");
 const $$Container = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$Container;
@@ -130,7 +130,7 @@ const P = forwardRef(
 );
 P.displayName = "Paragraph";
 
-const $$Astro$e = createAstro("https://husilijorad.beget.app");
+const $$Astro$e = createAstro("https://stars-coffee53.ru");
 const $$Section = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$Section;
@@ -203,7 +203,7 @@ class ImmutableDataStore {
    */
   static async fromModule() {
     try {
-      const data = await import('./_astro_data-layer-content_fazhPEFu.mjs');
+      const data = await import('./_astro_data-layer-content__d4xtwrf.mjs');
       if (data.default instanceof Map) {
         return ImmutableDataStore.fromMap(data.default);
       }
@@ -235,7 +235,7 @@ function dataStoreSingleton() {
 }
 const globalDataStore = dataStoreSingleton();
 
-const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_STRAPI_URL": "http://localhost:1337", "SITE": "https://husilijorad.beget.app", "SSR": true};
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_STRAPI_URL": "http://localhost:1337", "SITE": "https://stars-coffee53.ru", "SSR": true};
 function createCollectionToGlobResultMap({
   globResult,
   contentDir
@@ -355,7 +355,7 @@ const CONTENT_LAYER_IMAGE_REGEX = /__ASTRO_IMAGE_="([^"]+)"/g;
 async function updateImageReferencesInBody(html, fileName) {
   const { default: imageAssetMap } = await import('./content-assets_qeZ-tKOB.mjs');
   const imageObjects = /* @__PURE__ */ new Map();
-  const { getImage } = await import('./_astro_assets_CczljEwY.mjs').then(n => n._);
+  const { getImage } = await import('./_astro_assets_nkgQe9XQ.mjs').then(n => n._);
   for (const [_full, imagePath] of html.matchAll(CONTENT_LAYER_IMAGE_REGEX)) {
     try {
       const decodedImagePath = JSON.parse(imagePath.replaceAll("&#x22;", '"'));
@@ -604,7 +604,7 @@ const Button = React.forwardRef(
 );
 Button.displayName = "Button";
 
-const $$Astro$d = createAstro("https://husilijorad.beget.app");
+const $$Astro$d = createAstro("https://stars-coffee53.ru");
 const $$Button = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$Button;
@@ -685,7 +685,7 @@ forwardRef(
   }
 );
 
-const $$Astro$c = createAstro("https://husilijorad.beget.app");
+const $$Astro$c = createAstro("https://stars-coffee53.ru");
 const $$Col = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Col;
@@ -701,7 +701,7 @@ const $$Col = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Component", Component, { "class": cn(colVariants({ span, adaptive, padding, gap }), className), ...rest }, { "default": ($$result2) => renderTemplate` ${renderSlot($$result2, $$slots["default"])} ` })}`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/Col.astro", void 0);
 
-const $$Astro$b = createAstro("https://husilijorad.beget.app");
+const $$Astro$b = createAstro("https://stars-coffee53.ru");
 const $$Input = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$Input;
@@ -709,7 +709,7 @@ const $$Input = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<input${addAttribute(clsx("", className), "class")}${spreadAttributes(props)}>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/Input.astro", void 0);
 
-const $$Astro$a = createAstro("https://husilijorad.beget.app");
+const $$Astro$a = createAstro("https://stars-coffee53.ru");
 const $$Link = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$Link;
@@ -721,7 +721,7 @@ const $$Link = createComponent(($$result, $$props, $$slots) => {
   ), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </a> <!-- </div> -->`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/Link.astro", void 0);
 
-const $$Astro$9 = createAstro("https://husilijorad.beget.app");
+const $$Astro$9 = createAstro("https://stars-coffee53.ru");
 const $$P = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$P;
@@ -737,7 +737,7 @@ const $$P = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Component", Component, { "class": cn(paragraphVariants({ size, leading, margin, align }), className), ...rest }, { "default": ($$result2) => renderTemplate` ${renderSlot($$result2, $$slots["default"])} ` })}`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/P.astro", void 0);
 
-const $$Astro$8 = createAstro("https://husilijorad.beget.app");
+const $$Astro$8 = createAstro("https://stars-coffee53.ru");
 const $$Card = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$Card;
@@ -745,7 +745,7 @@ const $$Card = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div${addAttribute(cn("rounded-lg border bg-card text-card-foreground shadow-sm", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </div>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/Card.astro", void 0);
 
-const $$Astro$7 = createAstro("https://husilijorad.beget.app");
+const $$Astro$7 = createAstro("https://stars-coffee53.ru");
 const $$CardContent = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$CardContent;
@@ -753,7 +753,7 @@ const $$CardContent = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div${addAttribute(cn("p-6 pt-0", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </div>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/CardContent.astro", void 0);
 
-const $$Astro$6 = createAstro("https://husilijorad.beget.app");
+const $$Astro$6 = createAstro("https://stars-coffee53.ru");
 const $$CardDescription = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$CardDescription;
@@ -761,7 +761,7 @@ const $$CardDescription = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<p${addAttribute(cn("text-sm text-muted-foreground", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </p>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/CardDescription.astro", void 0);
 
-const $$Astro$5 = createAstro("https://husilijorad.beget.app");
+const $$Astro$5 = createAstro("https://stars-coffee53.ru");
 const $$CardFooter = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$CardFooter;
@@ -769,7 +769,7 @@ const $$CardFooter = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div${addAttribute(cn("flex items-center p-6 pt-0", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </div>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/CardFooter.astro", void 0);
 
-const $$Astro$4 = createAstro("https://husilijorad.beget.app");
+const $$Astro$4 = createAstro("https://stars-coffee53.ru");
 const $$CardHeader = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$CardHeader;
@@ -777,7 +777,7 @@ const $$CardHeader = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div${addAttribute(cn("flex flex-col space-y-1.5 p-6", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </div>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/CardHeader.astro", void 0);
 
-const $$Astro$3 = createAstro("https://husilijorad.beget.app");
+const $$Astro$3 = createAstro("https://stars-coffee53.ru");
 const $$CardTitle = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$CardTitle;
@@ -785,7 +785,7 @@ const $$CardTitle = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<h3${addAttribute(cn("text-2xl font-semibold leading-none tracking-tight", className), "class")}${spreadAttributes(props)}> ${renderSlot($$result, $$slots["default"])} </h3>`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/card/CardTitle.astro", void 0);
 
-const $$Astro$2 = createAstro("https://husilijorad.beget.app");
+const $$Astro$2 = createAstro("https://stars-coffee53.ru");
 const $$Seo = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Seo;
@@ -921,7 +921,7 @@ const MobileMenu = () => {
   ] });
 };
 
-const $$Astro$1 = createAstro("https://husilijorad.beget.app");
+const $$Astro$1 = createAstro("https://stars-coffee53.ru");
 const $$DesktopMenu = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$DesktopMenu;
@@ -938,7 +938,7 @@ var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
 var _a;
-const $$Astro = createAstro("https://husilijorad.beget.app");
+const $$Astro = createAstro("https://stars-coffee53.ru");
 const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;

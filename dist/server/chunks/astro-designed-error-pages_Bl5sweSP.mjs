@@ -608,7 +608,7 @@ function stringify_primitive(thing) {
 	return String(thing);
 }
 
-const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_STRAPI_URL": "http://localhost:1337", "SITE": "https://husilijorad.beget.app", "SSR": true};
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_STRAPI_URL": "http://localhost:1337", "SITE": "https://stars-coffee53.ru", "SSR": true};
 const ACTION_QUERY_PARAMS = ACTION_QUERY_PARAMS$1;
 const codeToStatusMap = {
   // Implemented from IANA HTTP Status Code Registry

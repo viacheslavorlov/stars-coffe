@@ -1,6 +1,6 @@
 import { c as createAstro, a as createComponent, r as renderComponent, b as renderTemplate, d as renderSlot, m as maybeRenderHead } from '../../chunks/astro/server_DS_OopFz.mjs';
-import { c as cn, $ as $$Layout, a as $$Section, b as $$Container, d as $$Button, e as $$Card, f as $$CardHeader, g as $$CardTitle, h as $$CardDescription, i as $$CardContent, j as $$CardFooter, k as $$P, l as $$Col } from '../../chunks/Layout_FW8wrf40.mjs';
-import { $ as $$H } from '../../chunks/H_D3Bi3PSi.mjs';
+import { c as cn, $ as $$Layout, a as $$Section, b as $$Container, d as $$Button, e as $$Card, f as $$CardHeader, g as $$CardTitle, h as $$CardDescription, i as $$CardContent, j as $$CardFooter, k as $$P, l as $$Col } from '../../chunks/Layout_ODW3cpuq.mjs';
+import { $ as $$H } from '../../chunks/H_DNZw9ln2.mjs';
 import { jsx } from 'react/jsx-runtime';
 import { cva } from 'class-variance-authority';
 import { forwardRef } from 'react';
@@ -78,7 +78,7 @@ forwardRef(
   }
 );
 
-const $$Astro$1 = createAstro("https://husilijorad.beget.app");
+const $$Astro$1 = createAstro("https://stars-coffee53.ru");
 const $$Row = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Row;
@@ -94,7 +94,7 @@ const $$Row = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Component", Component, { "class": cn(rowVariants({ direction, justify, align, spacing, className })), ...rest }, { "default": ($$result2) => renderTemplate` ${renderSlot($$result2, $$slots["default"])} ` })}`;
 }, "/home/viacheslav/projects/stars-coffe/src/components/astro/Row.astro", void 0);
 
-const $$Astro = createAstro("https://husilijorad.beget.app");
+const $$Astro = createAstro("https://stars-coffee53.ru");
 const $$Component = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Component;
